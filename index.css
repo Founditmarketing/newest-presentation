@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@config "./tailwind.config.js";
+
+:root {
+    --brand-orange: #ff6600;
+    --brand-black: #050505;
+    --brand-dark: #0a0a0a;
+    --bg-grid: rgba(255, 255, 255, 0.03);
+}
+
+@layer base {
+    body {
+        @apply bg-brand-black text-white overflow-hidden overscroll-none font-sans antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-serif tracking-tight;
+    }
+}
+
+@layer utilities {
+    .text-glow {
+        text-shadow: 0 0 30px rgba(221, 70, 0, 0.4);
+    }
+
+    .border-glow {
+        box-shadow: 0 0 20px rgba(221, 70, 0, 0.1);
+    }
+
+    .glass-panel {
+        @apply bg-[#080808]/40 backdrop-blur-2xl border border-white/5 shadow-2xl;
+    }
+
+    .glass-panel-heavy {
+        @apply bg-[#030303]/80 backdrop-blur-3xl border border-white/5;
+    }
+}
+
+/* Perspective Grid Animation */
+.perspective-container {
+    perspective: 1200px;
+    /* Deeper perspective */
+    overflow: hidden;
+}
+
+.perspective-grid {
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    bottom: -100%;
+    left: -100%;
+    background-image:
+        linear-gradient(to right, rgba(255, 102, 0, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 102, 0, 0.15) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: rotateX(70deg);
+    transform-origin: 50% 0;
+    mask-image: linear-gradient(to bottom, transparent 10%, black 50%, black 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 10%, black 50%, black 100%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6600;
+}
