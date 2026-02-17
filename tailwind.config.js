@@ -14,7 +14,7 @@ export default {
                     dark: '#080808', // Off-black for contrast
                     gray: '#1A1A1A', // Deep Gray
                     silver: '#E5E5E5', // High-end text
-                }
+                },
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

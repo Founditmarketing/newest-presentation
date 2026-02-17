@@ -1,46 +1,46 @@
 import React from 'react';
-import { Slide } from '../components/Slide';
-import { Heading, Text } from '../components/Typography';
+import { SlideLayout, itemVariants } from '@/components/SlideLayout';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
+import Logo from '@/components/Logo';
 
 export const ConclusionSlide: React.FC = () => {
     return (
-        <Slide className="text-center flex flex-col justify-center h-full">
-            <Heading level="h2" className="mb-8 leading-snug">
-                You have mastered the <br />
-                <span className="text-charcoal-400">physical relationship.</span>
-            </Heading>
+        <SlideLayout className="text-center">
+            <div className="flex flex-col h-full justify-center items-center">
+                <motion.div variants={itemVariants} className="mb-8">
+                    <Logo className="text-5xl md:text-6xl text-brand-orange mb-6" />
+                    <h2 className="font-serif text-4xl md:text-5xl text-white mb-8 leading-tight">
+                        You have mastered the <br />
+                        <span className="text-gray-500">physical relationship.</span>
+                    </h2>
+                </motion.div>
 
-            <Heading level="h1" className="mb-16">
-                Let me build your <br />
-                <span className="text-gold-500">Digital One.</span>
-            </Heading>
+                <motion.div variants={itemVariants} className="mb-12">
+                    <p className="text-xl md:text-2xl text-white font-light">
+                        Let me build your <span className="text-brand-orange font-bold border-b-2 border-brand-orange">Digital One.</span>
+                    </p>
+                </motion.div>
 
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-                className="flex flex-col items-center gap-6"
-            >
-                <div className="w-20 h-20 rounded-full bg-charcoal-800 border border-charcoal-600 flex items-center justify-center mb-2 overflow-hidden">
-                    {/* Placeholder for Trevor's Headshot if available, otherwise Initials */}
-                    <span className="font-serif text-2xl text-gold-500">TR</span>
-                </div>
-
-                <div className="space-y-1">
-                    <p className="text-cream-100 font-serif text-xl tracking-wide">Trevor Ruby</p>
-                    <p className="text-charcoal-500 text-sm tracking-widest uppercase">Found It Marketing</p>
-                </div>
-
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="mt-8 px-8 py-4 bg-gold-500 text-charcoal-900 font-bold tracking-wide rounded-sm flex items-center gap-3 hover:bg-gold-400 transition-colors"
+                <motion.div
+                    variants={itemVariants}
+                    className="flex flex-col items-center gap-6"
                 >
-                    Start the Conversation <ArrowRight size={20} />
-                </motion.button>
-            </motion.div>
-        </Slide>
+                    <a
+                        href="mailto:Trevor@founditmarketing.com"
+                        className="group relative inline-flex items-center gap-4 px-10 py-5 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                    >
+                        <Mail size={24} className="text-brand-orange" />
+                        <span>Start the Conversation</span>
+                        <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+                    </a>
+
+                    <div className="flex flex-col items-center mt-8 space-y-2 opacity-60">
+                        <p className="text-white font-serif text-lg tracking-wide">Trevor Ruby</p>
+                        <p className="text-brand-orange text-xs tracking-widest uppercase font-mono">Found It Marketing</p>
+                    </div>
+                </motion.div>
+            </div>
+        </SlideLayout>
     );
 };

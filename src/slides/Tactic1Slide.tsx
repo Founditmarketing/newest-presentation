@@ -1,53 +1,45 @@
 import React from 'react';
-import { Slide } from '../components/Slide';
-import { Heading, Text } from '../components/Typography';
+import { SlideLayout, itemVariants } from '@/components/SlideLayout';
 import { motion } from 'framer-motion';
-import { Target, MapPin } from 'lucide-react';
+import { Target, MapPin, Building2, GraduationCap, Wine } from 'lucide-react';
 
 export const Tactic1Slide: React.FC = () => {
     return (
-        <Slide className="text-center">
-            <motion.div
-                className="inline-flex items-center justify-center gap-2 mb-8 text-gold-500 border border-gold-500/30 px-4 py-1 rounded-full text-sm font-serif tracking-widest uppercase"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-            >
-                <Target size={14} />
-                <span>Tactic 1</span>
-            </motion.div>
+        <SlideLayout>
+            <div className="flex flex-col h-full justify-center">
+                <motion.div variants={itemVariants} className="mb-8">
+                    <div className="flex items-center gap-2 mb-2 text-brand-orange font-mono uppercase tracking-widest text-xs">
+                        <Target size={14} /> Tactic 1
+                    </div>
+                    <h2 className="font-serif text-5xl text-white">Geo-Fencing</h2>
+                </motion.div>
 
-            <Heading level="h2" className="mb-4">
-                Geo-Fencing
-            </Heading>
+                <motion.p variants={itemVariants} className="text-xl text-gray-300 font-light mb-10 max-w-3xl">
+                    "We don't wait for them to search; <span className="text-white font-bold">we go where they live.</span>"
+                </motion.p>
 
-            <Heading level="h3" className="mb-12 text-cream-200 font-light max-w-2xl mx-auto">
-                "We don't wait for them to search; <br />we go where they live."
-            </Heading>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                {[
-                    { label: "Country Clubs", delay: 0.4 },
-                    { label: "Alumni Events", delay: 0.6 },
-                    { label: "Charity Galas", delay: 0.8 },
-                ].map((item, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: item.delay }}
-                        className="p-6 bg-charcoal-800 border border-charcoal-700 hover:border-gold-500/50 transition-colors group rounded-xl flex flex-col items-center gap-4"
-                    >
-                        <div className="w-12 h-12 bg-charcoal-900 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <MapPin className="text-gold-500" size={20} />
-                        </div>
-                        <span className="text-cream-100 font-serif tracking-wide">{item.label}</span>
-                    </motion.div>
-                ))}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {[
+                        { label: "Country Clubs", icon: Wine },
+                        { label: "Alumni Events", icon: GraduationCap },
+                        { label: "Charity Galas", icon: Building2 },
+                    ].map((item, index) => (
+                        <motion.div
+                            key={index}
+                            variants={itemVariants}
+                            className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-white/10 hover:border-brand-orange/30 transition-colors group"
+                        >
+                            <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-brand-orange group-hover:text-black transition-colors text-gray-400">
+                                <item.icon size={24} />
+                            </div>
+                            <span className="text-white font-serif tracking-wide text-lg">{item.label}</span>
+                            <div className="text-xs text-gray-500 font-mono flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <MapPin size={10} /> TARGET ACTIVE
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
-
-            <Text subtle className="mt-12 max-w-2xl mx-auto text-sm">
-                Digitally fencing high-net-worth locations ensures we are speaking directly to your peer group, before they even realize they need you.
-            </Text>
-        </Slide>
+        </SlideLayout>
     );
 };

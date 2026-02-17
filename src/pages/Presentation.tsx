@@ -24,6 +24,14 @@ import { SlideLayout, itemVariants } from '@/components/SlideLayout';
 import { SlideData } from '@/types';
 import { useSync } from '@/components/SyncProvider';
 import { LobbySlide } from '@/components/LobbySlide';
+import { TitleSlide } from '@/src/slides/TitleSlide';
+import { ProblemSlide } from '@/src/slides/ProblemSlide';
+import { SolutionSlide } from '@/src/slides/SolutionSlide';
+import { BlueprintSlide } from '@/src/slides/BlueprintSlide';
+import { Tactic1Slide } from '@/src/slides/Tactic1Slide';
+import { Tactic2Slide } from '@/src/slides/Tactic2Slide';
+import { Tactic3Slide } from '@/src/slides/Tactic3Slide';
+import { ConclusionSlide } from '@/src/slides/ConclusionSlide';
 
 // Line 27: import Logo ...
 // Line 39: ...
@@ -574,6 +582,71 @@ const slides: SlideData[] = [
         notes: [
             "Closing: 'I'm not asking you to understand all the code. That's my job. I'm asking you to trust the results.'",
             "Call to Action: 'Let us run a scan on your current digital footprint. Thank you for your time.'"
+        ]
+    },
+    // --- The Digital Concierge Model ---
+    {
+        id: 'concierge-title',
+        component: TitleSlide,
+        notes: [
+            "Intro: 'The Digital Concierge. Scaling High-Touch Relationships in an Automating World.'",
+            "Context: 'Presented by Trevor Ruby.'"
+        ]
+    },
+    {
+        id: 'concierge-problem',
+        component: ProblemSlide,
+        notes: [
+            "Problem: 'Most luxury businesses have vending machine websites. Cold. Transactional.'",
+            "Pain: 'We are losing the handshake the moment a client goes online.'"
+        ]
+    },
+    {
+        id: 'concierge-solution',
+        component: SolutionSlide,
+        notes: [
+            "Solution: 'We don't build websites. We build Digital Estates.'",
+            "Concept: 'Using Data and AI to mirror your white-glove service.'"
+        ]
+    },
+    {
+        id: 'concierge-blueprint',
+        component: BlueprintSlide,
+        notes: [
+            "Case Study: 'Andrew Davis Clothiers.'",
+            "Goal: 'Expanding from local shop to Regional Destination. Capturing Drive-In Wealth.'"
+        ]
+    },
+    {
+        id: 'concierge-tactic1',
+        component: Tactic1Slide,
+        notes: [
+            "Geo-Fencing: 'Digitally fencing high-net-worth locations like Country Clubs.'",
+            "Quote: 'We don't wait for them to search; we go where they live.'"
+        ]
+    },
+    {
+        id: 'concierge-tactic2',
+        component: Tactic2Slide,
+        notes: [
+            "AI Expert: 'Contrast Chatbot vs AI Concierge.'",
+            "Detail: 'Sartorial Advisor knowing every fabric vs generic support.'"
+        ]
+    },
+    {
+        id: 'concierge-tactic3',
+        component: Tactic3Slide,
+        notes: [
+            "Lifecycle: 'Turning a one-time transaction into a lifetime relationship.'",
+            "Method: 'Automated, personalized follow-up.'"
+        ]
+    },
+    {
+        id: 'concierge-conclusion',
+        component: ConclusionSlide,
+        notes: [
+            "Conclusion: 'You have mastered the physical relationship.'",
+            "Ask: 'Let me build your digital one.'"
         ]
     }
 ];
