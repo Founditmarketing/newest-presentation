@@ -8,7 +8,7 @@ export const SolutionSlide: React.FC = () => {
         <SlideLayout>
             <div className="flex flex-col h-full justify-center">
                 <motion.div variants={itemVariants} className="mb-8">
-                    <h2 className="font-serif text-5xl text-white mb-2">The Solution</h2>
+                    <h2 className="font-serif text-3xl md:text-5xl text-white mb-2">The Solution</h2>
                     <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-white font-bold italic">
                         Digital Estates
                     </p>

@@ -9,7 +9,7 @@ export const BlueprintSlide: React.FC = () => {
             <div className="flex flex-col h-full justify-center">
                 <motion.div variants={itemVariants} className="mb-8 border-b border-gray-800 pb-4">
                     <div className="text-brand-orange text-xs font-mono mb-1 tracking-widest uppercase">The Blueprint</div>
-                    <h2 className="font-serif text-4xl text-white">Andrew Davis Clothiers</h2>
+                    <h2 className="font-serif text-3xl md:text-4xl text-white">Andrew Davis Clothiers</h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

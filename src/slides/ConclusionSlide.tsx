@@ -9,8 +9,8 @@ export const ConclusionSlide: React.FC = () => {
         <SlideLayout className="text-center">
             <div className="flex flex-col h-full justify-center items-center">
                 <motion.div variants={itemVariants} className="mb-8">
-                    <Logo className="text-5xl md:text-6xl text-brand-orange mb-6" />
-                    <h2 className="font-serif text-4xl md:text-5xl text-white mb-8 leading-tight">
+                    <Logo className="text-4xl md:text-6xl text-brand-orange mb-6" />
+                    <h2 className="font-serif text-3xl md:text-5xl text-white mb-8 leading-tight">
                         You have mastered the <br />
                         <span className="text-gray-500">physical relationship.</span>
                     </h2>

@@ -11,7 +11,7 @@ export const ProblemSlide: React.FC = () => {
                     <div className="inline-block p-2 rounded-lg bg-red-900/20 text-red-500 mb-4 border border-red-900/30">
                         <AlertTriangle size={24} />
                     </div>
-                    <h2 className="font-serif text-5xl text-white mb-4">
+                    <h2 className="font-serif text-3xl md:text-5xl text-white mb-4">
                         The Problem
                     </h2>
                     <p className="text-2xl text-gray-400 font-light">

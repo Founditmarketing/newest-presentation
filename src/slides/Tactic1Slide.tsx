@@ -11,7 +11,7 @@ export const Tactic1Slide: React.FC = () => {
                     <div className="flex items-center gap-2 mb-2 text-brand-orange font-mono uppercase tracking-widest text-xs">
                         <Target size={14} /> Tactic 1
                     </div>
-                    <h2 className="font-serif text-5xl text-white">Geo-Fencing</h2>
+                    <h2 className="font-serif text-3xl md:text-5xl text-white">Geo-Fencing</h2>
                 </motion.div>
 
                 <motion.p variants={itemVariants} className="text-xl text-gray-300 font-light mb-10 max-w-3xl">

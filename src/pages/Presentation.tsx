@@ -98,8 +98,8 @@ const FoundItStatsSlide: React.FC = () => (
     <SlideLayout>
         <div className="flex flex-col h-full justify-center">
             <motion.div variants={itemVariants} className="mb-8 border-b border-brand-orange/30 pb-6">
-                <Logo className="text-5xl md:text-6xl mb-4" />
-                <h2 className="font-serif text-3xl text-gray-300 italic">
+                <Logo className="text-4xl md:text-6xl mb-4" />
+                <h2 className="font-serif text-2xl md:text-3xl text-gray-300 italic">
                     "We don't do campaigns. <br /><span className="text-white font-bold not-italic">We build empires.</span>"
                 </h2>
             </motion.div>
@@ -107,20 +107,20 @@ const FoundItStatsSlide: React.FC = () => (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <motion.div variants={itemVariants}>
                     <div className="flex flex-col">
-                        <span className="text-4xl font-bold text-white">280,000+</span>
-                        <span className="text-sm text-gray-400 uppercase tracking-widest">Leads & Interactions</span>
+                        <span className="text-3xl md:text-4xl font-bold text-white">280,000+</span>
+                        <span className="text-xs md:text-sm text-gray-400 uppercase tracking-widest">Leads & Interactions</span>
                     </div>
                 </motion.div>
                 <motion.div variants={itemVariants}>
                     <div className="flex flex-col">
-                        <span className="text-4xl font-bold text-white">$2.3B+</span>
-                        <span className="text-sm text-gray-400 uppercase tracking-widest">Client Revenue</span>
+                        <span className="text-3xl md:text-4xl font-bold text-white">$2.3B+</span>
+                        <span className="text-xs md:text-sm text-gray-400 uppercase tracking-widest">Client Revenue</span>
                     </div>
                 </motion.div>
                 <motion.div variants={itemVariants}>
                     <div className="flex flex-col">
-                        <span className="text-4xl font-bold text-white">$560M+</span>
-                        <span className="text-sm text-gray-400 uppercase tracking-widest">Organic Revenue</span>
+                        <span className="text-3xl md:text-4xl font-bold text-white">$560M+</span>
+                        <span className="text-xs md:text-sm text-gray-400 uppercase tracking-widest">Organic Revenue</span>
                     </div>
                 </motion.div>
             </div>

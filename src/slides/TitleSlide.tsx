@@ -8,12 +8,12 @@ export const TitleSlide: React.FC = () => {
         <SlideLayout className="text-center">
             <div className="flex flex-col h-full justify-center items-center gap-8">
                 <motion.div variants={itemVariants} className="mb-4">
-                    <Logo className="text-5xl md:text-6xl text-brand-orange" />
+                    <Logo className="text-4xl md:text-6xl text-brand-orange" />
                 </motion.div>
 
                 <div className="space-y-4">
                     <motion.div variants={itemVariants}>
-                        <h1 className="font-serif text-6xl md:text-7xl text-white leading-tight">
+                        <h1 className="font-serif text-4xl md:text-7xl text-white leading-tight">
                             The Digital <br />
                             <span className="text-brand-orange">Concierge</span>
                         </h1>
