@@ -9,7 +9,7 @@ export const BlueprintSlide: React.FC = () => {
             <div className="flex flex-col h-full justify-center">
                 <motion.div variants={itemVariants} className="mb-12 border-b border-white/10 pb-6 relative">
                     <div className="text-brand-gold text-xs md:text-sm font-sans mb-2 tracking-[0.2em] uppercase">VI. The ROI</div>
-                    <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white">Measuring Clicks vs. Fittings</h2>
+                    <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white">Measuring Clicks vs. Fittings</h2>
                     {/* Subtle bleed image effect placeholder */}
                     <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/5 to-transparent pointer-events-none"></div>
                 </motion.div>

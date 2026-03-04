@@ -11,12 +11,12 @@ export const SolutionSlide: React.FC = () => {
                     <h2 className="font-sans text-xs md:text-sm tracking-[0.3em] text-brand-gold uppercase mb-4">
                         II. The Fear
                     </h2>
-                    <h3 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+                    <h3 className="font-serif text-4xl md:text-5xl lg:text-7xl text-white mb-6 leading-tight">
                         AI as your "JARVIS"
                     </h3>
                 </motion.div>
 
-                <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-300 font-sans font-light mb-16 max-w-4xl border-l-2 border-brand-gold pl-6 leading-relaxed">
+                <motion.p variants={itemVariants} className="text-lg md:text-2xl text-gray-300 font-sans font-light mb-16 max-w-4xl border-l-2 border-brand-gold pl-6 leading-relaxed">
                     You're worried AI makes your business cold. It's the exact opposite. AI is the most <strong className="text-white font-medium">"High-Touch"</strong> tool ever invented because it never forgets, never sleeps, and has no ego.
                 </motion.p>
 

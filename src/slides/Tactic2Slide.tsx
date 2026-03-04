@@ -11,7 +11,7 @@ export const Tactic2Slide: React.FC = () => {
                     <div className="flex items-center gap-3 mb-3 text-brand-gold font-sans uppercase tracking-[0.2em] text-xs md:text-sm">
                         <span>IV. Monday Morning</span>
                     </div>
-                    <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white">The AI-Powered CRM</h2>
+                    <h2 className="font-serif text-4xl md:text-5xl lg:text-7xl text-white">The AI-Powered CRM</h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-brand-gold/10 p-[1px] mb-8">

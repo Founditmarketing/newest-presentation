@@ -11,10 +11,10 @@ export const Tactic1Slide: React.FC = () => {
                     <div className="flex items-center gap-3 mb-3 text-brand-gold font-sans uppercase tracking-[0.2em] text-xs md:text-sm">
                         <span>III. The Interactive Demo</span>
                     </div>
-                    <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white">Talk to Ted</h2>
+                    <h2 className="font-serif text-4xl md:text-5xl lg:text-7xl text-white">Talk to Ted</h2>
                 </motion.div>
 
-                <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-300 font-serif italic mb-12 border-l-2 border-brand-gold pl-6 max-w-4xl leading-relaxed">
+                <motion.p variants={itemVariants} className="text-lg md:text-2xl text-gray-300 font-serif italic mb-12 border-l-2 border-brand-gold pl-6 max-w-4xl leading-relaxed">
                     "Notice the tone. That isn't a robot. <strong className="text-white font-medium not-italic">That’s Ted.</strong> It’s gracious. It’s authoritative. It’s capturing leads while we sit in this room."
                 </motion.p>
 

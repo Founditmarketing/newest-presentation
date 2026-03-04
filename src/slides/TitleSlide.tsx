@@ -19,7 +19,7 @@ export const TitleSlide: React.FC = () => {
 
                 <div className="space-y-6">
                     <motion.div variants={itemVariants}>
-                        <h1 className="font-serif text-[11vw] md:text-[8vw] lg:text-[7.2vw] text-white leading-none tracking-tighter uppercase px-4 whitespace-nowrap flex-nowrap">
+                        <h1 className="font-serif text-[11vw] md:text-[8vw] lg:text-[7.2vw] text-white leading-none tracking-tighter uppercase px-4">
                             The Living Legacy<br />
                             <span className="text-brand-gold italic lowercase tracking-normal px-4">Masterclass.</span>
                         </h1>

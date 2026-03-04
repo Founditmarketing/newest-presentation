@@ -11,10 +11,10 @@ export const Tactic3Slide: React.FC = () => {
                     <div className="flex items-center gap-3 mb-3 text-brand-gold font-sans uppercase tracking-[0.2em] text-xs justify-center md:justify-start">
                         <span>V. Content</span>
                     </div>
-                    <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white">The Virtual Lookbook</h2>
+                    <h2 className="font-serif text-4xl md:text-5xl lg:text-7xl text-white">The Virtual Lookbook</h2>
                 </motion.div>
 
-                <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-300 font-serif italic mb-16 text-center md:text-left leading-relaxed">
+                <motion.p variants={itemVariants} className="text-lg md:text-2xl text-gray-300 font-serif italic mb-16 text-center md:text-left leading-relaxed">
                     You spend thousands on photography. <strong className="text-brand-gold font-medium not-italic">AI makes it work 10x harder in your 'House Voice'.</strong>
                 </motion.p>
 

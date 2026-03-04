@@ -15,7 +15,7 @@ export const ConclusionSlide: React.FC = () => {
             <div className="flex flex-col h-full justify-center items-center relative z-10">
                 <motion.div variants={itemVariants} className="mb-8">
                     <Logo className="text-4xl md:text-6xl text-brand-gold mb-8 mx-auto" />
-                    <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight px-4">
+                    <h2 className="font-serif text-4xl md:text-5xl lg:text-7xl text-white mb-6 leading-tight px-4">
                         The 90-Day Roadmap &<br />The Big Ask
                     </h2>
                 </motion.div>
