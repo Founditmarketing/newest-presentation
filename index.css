@@ -2,9 +2,9 @@
 @config "./tailwind.config.js";
 
 :root {
-    --brand-orange: #ff6600;
-    --brand-black: #050505;
-    --brand-dark: #0a0a0a;
+    --brand-gold: #D4AF37;
+    --brand-black: #0A0A0A;
+    --brand-charcoal: #121212;
     --bg-grid: rgba(255, 255, 255, 0.03);
 }
 
@@ -25,19 +25,23 @@
 
 @layer utilities {
     .text-glow {
-        text-shadow: 0 0 30px rgba(221, 70, 0, 0.4);
+        text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
     }
 
     .border-glow {
-        box-shadow: 0 0 20px rgba(221, 70, 0, 0.1);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
     }
 
     .glass-panel {
-        @apply bg-[#080808]/40 backdrop-blur-2xl border border-white/5 shadow-2xl;
+        @apply bg-[#121212]/40 backdrop-blur-2xl border border-brand-gold/20 shadow-2xl;
     }
 
     .glass-panel-heavy {
-        @apply bg-[#030303]/80 backdrop-blur-3xl border border-white/5;
+        @apply bg-[#0A0A0A]/80 backdrop-blur-3xl border border-brand-gold/30;
+    }
+
+    .filter-editorial {
+        filter: contrast(1.1) saturate(0.8) sepia(0.1) brightness(0.9);
     }
 }
 
@@ -55,8 +59,8 @@
     bottom: -100%;
     left: -100%;
     background-image:
-        linear-gradient(to right, rgba(255, 102, 0, 0.15) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 102, 0, 0.15) 1px, transparent 1px);
+        linear-gradient(to right, rgba(212, 175, 55, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 175, 55, 0.15) 1px, transparent 1px);
     background-size: 60px 60px;
     transform: rotateX(70deg);
     transform-origin: 50% 0;
@@ -70,14 +74,14 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #050505;
+    background: #0A0A0A;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #333;
+    background: #121212;
     border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #ff6600;
+    background: #D4AF37;
 }

@@ -9,16 +9,17 @@ export default {
         extend: {
             colors: {
                 brand: {
-                    orange: '#DD4600', // International/Hermes Orange (Deeper, less neon)
-                    black: '#030303', // Rich Black (OLED friendly)
-                    dark: '#080808', // Off-black for contrast
-                    gray: '#1A1A1A', // Deep Gray
-                    silver: '#E5E5E5', // High-end text
+                    black: '#0A0A0A', // Rich Black
+                    charcoal: '#121212', // Deep Charcoal
+                    gold: '#D4AF37', // Metallic Gold
+                    dark: '#080808', // Off-black for contrast (legacy)
+                    gray: '#1A1A1A', // Deep Gray (legacy)
+                    silver: '#E5E5E5', // High-end text (legacy)
                 },
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                serif: ['Playfair Display', 'serif'],
+                sans: ['Montserrat', 'sans-serif'],
+                serif: ['"Cormorant Garamond"', 'serif'],
                 mono: ['JetBrains Mono', 'Menlo', 'monospace'],
             },
             animation: {

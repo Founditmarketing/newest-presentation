@@ -1,40 +1,41 @@
 import React from 'react';
 import { SlideLayout, itemVariants } from '@/components/SlideLayout';
 import { motion } from 'framer-motion';
-import { Target, MapPin, Building2, GraduationCap, Wine } from 'lucide-react';
+import { Crosshair, Map, User } from 'lucide-react';
 
 export const Tactic1Slide: React.FC = () => {
     return (
         <SlideLayout>
             <div className="flex flex-col h-full justify-center">
-                <motion.div variants={itemVariants} className="mb-8">
-                    <div className="flex items-center gap-2 mb-2 text-brand-orange font-mono uppercase tracking-widest text-xs">
-                        <Target size={14} /> Tactic 1
+                <motion.div variants={itemVariants} className="mb-12">
+                    <div className="flex items-center gap-3 mb-3 text-brand-gold font-sans uppercase tracking-[0.2em] text-xs">
+                        <Crosshair size={14} className="text-brand-gold" />
+                        <span>Pillar 1</span>
                     </div>
-                    <h2 className="font-serif text-3xl md:text-5xl text-white">Geo-Fencing</h2>
+                    <h2 className="font-serif text-4xl md:text-5xl text-white">Drive-In Wealth (Geo-Fencing)</h2>
                 </motion.div>
 
-                <motion.p variants={itemVariants} className="text-xl text-gray-300 font-light mb-10 max-w-3xl">
-                    "We don't wait for them to search; <span className="text-white font-bold">we go where they live.</span>"
+                <motion.p variants={itemVariants} className="text-2xl text-gray-300 font-serif italic mb-12 border-l-2 border-brand-gold pl-6 max-w-4xl leading-relaxed">
+                    "Capturing high-net-worth attention at Country Clubs and Alumni events <strong className="text-white font-medium not-italic">before they even search Google.</strong>"
                 </motion.p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
-                        { label: "Country Clubs", icon: Wine },
-                        { label: "Alumni Events", icon: GraduationCap },
-                        { label: "Charity Galas", icon: Building2 },
+                        { label: "Precision Targeting", desc: "Pinpoint accuracy over affluent demographics.", icon: Crosshair },
+                        { label: "Strategic Territories", desc: "Mapping high-value micro-regions.", icon: Map },
+                        { label: "Preemptive Exposure", desc: "Owning the narrative before the client asks.", icon: User },
                     ].map((item, index) => (
                         <motion.div
                             key={index}
                             variants={itemVariants}
-                            className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-white/10 hover:border-brand-orange/30 transition-colors group"
+                            className="bg-brand-charcoal border border-brand-gold/10 p-8 flex flex-col items-start gap-6 hover:bg-brand-charcoal/80 hover:border-brand-gold/40 transition-all duration-300 group rounded-none"
                         >
-                            <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-brand-orange group-hover:text-black transition-colors text-gray-400">
-                                <item.icon size={24} />
+                            <div className="w-12 h-12 bg-black border border-brand-gold/20 flex items-center justify-center group-hover:bg-brand-gold group-hover:border-brand-gold transition-colors text-brand-gold group-hover:text-black">
+                                <item.icon size={24} strokeWidth={1.5} />
                             </div>
-                            <span className="text-white font-serif tracking-wide text-lg">{item.label}</span>
-                            <div className="text-xs text-gray-500 font-mono flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <MapPin size={10} /> TARGET ACTIVE
+                            <div>
+                                <h3 className="text-brand-gold font-sans text-sm tracking-widest uppercase mb-2">{item.label}</h3>
+                                <p className="text-gray-400 font-sans text-sm leading-relaxed">{item.desc}</p>
                             </div>
                         </motion.div>
                     ))}

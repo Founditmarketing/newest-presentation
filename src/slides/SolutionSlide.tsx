@@ -1,45 +1,45 @@
 import React from 'react';
 import { SlideLayout, itemVariants } from '@/components/SlideLayout';
 import { motion } from 'framer-motion';
-import { Bot, Castle, Globe, Sparkles } from 'lucide-react';
+import { Castle, TrendingUp } from 'lucide-react';
 
 export const SolutionSlide: React.FC = () => {
     return (
         <SlideLayout>
             <div className="flex flex-col h-full justify-center">
-                <motion.div variants={itemVariants} className="mb-8">
-                    <h2 className="font-serif text-3xl md:text-5xl text-white mb-2">The Solution</h2>
-                    <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-white font-bold italic">
-                        Digital Estates
+                <motion.div variants={itemVariants} className="mb-12">
+                    <h2 className="font-serif text-4xl md:text-5xl text-white mb-3">Assets vs. Expenses</h2>
+                    <p className="text-2xl text-brand-gold font-serif italic">
+                        The Business Impact
                     </p>
                 </motion.div>
 
-                <motion.p variants={itemVariants} className="text-xl text-gray-300 font-light mb-10 max-w-3xl">
-                    We don't build websites. We build <span className="text-white font-bold border-b-2 border-brand-orange/50">Intelligence Systems</span> that mirror your white-glove service.
+                <motion.p variants={itemVariants} className="text-2xl text-gray-300 font-sans font-light mb-16 max-w-4xl border-l border-brand-gold pl-6 leading-relaxed">
+                    You aren't paying for "Clicks" (Expenses). We are building an <strong className="text-brand-gold font-medium">"Estate" (Asset)</strong> that appreciates in value.
                 </motion.p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <motion.div variants={itemVariants} className="p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                        <div className="flex items-center gap-4 mb-4">
-                            <div className="p-3 bg-brand-orange/10 rounded-full text-brand-orange">
-                                <Castle size={24} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <motion.div variants={itemVariants} className="p-8 rounded-none border border-brand-gold/10 bg-brand-charcoal hover:bg-brand-charcoal/80 transition-colors">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-4 bg-black border border-brand-gold/20 text-brand-gold">
+                                <TrendingUp size={24} />
                             </div>
-                            <h3 className="text-xl font-serif text-white">Hospitality First</h3>
+                            <h3 className="text-2xl font-serif text-white">The Legacy Multiplier</h3>
                         </div>
-                        <p className="text-gray-400 text-sm leading-relaxed">
-                            It welcomes, guides, and remembers. It's not just a digital brochure; it is a concierge that never sleeps.
+                        <p className="text-gray-400 font-sans text-sm leading-relaxed">
+                            A highly-trained digital concierge doesn't just cut costs—it re-captures lost revenue daily by extending your store's hours infinitely without adding headcount.
                         </p>
                     </motion.div>
 
-                    <motion.div variants={itemVariants} className="p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                        <div className="flex items-center gap-4 mb-4">
-                            <div className="p-3 bg-brand-orange/10 rounded-full text-brand-orange">
-                                <Bot size={24} />
+                    <motion.div variants={itemVariants} className="p-8 rounded-none border border-brand-gold/30 bg-brand-gold/5 shadow-[0_0_50px_rgba(212,175,55,0.05)] hover:bg-brand-gold/10 transition-colors">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-4 bg-brand-gold text-black">
+                                <Castle size={24} />
                             </div>
-                            <h3 className="text-xl font-serif text-white">Intelligent Automation</h3>
+                            <h3 className="text-2xl font-serif text-brand-gold">Capital Investment</h3>
                         </div>
-                        <p className="text-gray-400 text-sm leading-relaxed">
-                            Leveraging AI data to handle the mundane, allowing you to focus on the high-value relationships.
+                        <p className="text-gray-300 font-sans text-sm leading-relaxed">
+                            Reframing marketing from a leaky bucket into a compounding asset. Your digital estate works tirelessly, ensuring your sartorial excellence scales effortlessly across the region.
                         </p>
                     </motion.div>
                 </div>
