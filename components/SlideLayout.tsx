@@ -6,6 +6,17 @@ interface SlideLayoutProps {
   className?: string;
 }
 
+const NoiseOverlay = () => (
+  <div className="pointer-events-none fixed inset-0 z-30 h-full w-full opacity-[0.03]">
+    <svg className="absolute h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <filter id="noiseFilter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+    </svg>
+  </div>
+);
+
 export const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -13,7 +24,7 @@ export const containerVariants: Variants = {
     transition: {
       staggerChildren: 0.15,
       delayChildren: 0.2,
-      duration: 0.8,
+      duration: 1.2,
       ease: [0.16, 1, 0.3, 1] // "Expo Out" - Heavy start, smooth heavy stop
     }
   },
@@ -36,9 +47,9 @@ export const itemVariants: Variants = {
     filter: "blur(0px)",
     transition: {
       type: "spring",
-      stiffness: 70, // Softer spring
-      damping: 20,   // More drag/weight
-      mass: 1.5      // Heavier feel
+      stiffness: 100, // Adjusted for Harmonious Cascade
+      damping: 25,    // Smoother stop
+      mass: 1.2       // Slightly lighter but still authoritative
     }
   },
   exit: { opacity: 0, y: -20, filter: "blur(5px)" }
@@ -46,18 +57,17 @@ export const itemVariants: Variants = {
 
 export const SlideLayout: React.FC<SlideLayoutProps> = ({ children, className = "" }) => {
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      className={`w-full max-w-5xl mx-auto px-6 h-full flex flex-col justify-center relative z-10 ${className}`}
-    >
-      {/* 
-         We could add a subtle parallax parallax layer here if we wanted deeper depth 
-         but we'll keep it clean for now as requested.
-      */}
-      {children}
-    </motion.div>
+    <>
+      <NoiseOverlay />
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={`w-full max-w-5xl mx-auto px-6 h-full flex flex-col justify-center relative z-10 ${className}`}
+      >
+        {children}
+      </motion.div>
+    </>
   );
 };

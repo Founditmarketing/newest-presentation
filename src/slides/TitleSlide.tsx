@@ -6,8 +6,11 @@ import { motion } from 'framer-motion';
 export const TitleSlide: React.FC = () => {
     return (
         <SlideLayout className="text-center relative overflow-hidden">
-            {/* Background Texture/Image placeholder (can be swapped for an actual high-res image later) */}
-            <div className="absolute inset-0 bg-brand-charcoal opacity-40 z-0 mix-blend-multiply filter-editorial"></div>
+            <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594938298596-f308feefe293?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-60 mix-blend-multiply filter-editorial scale-105 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-brand-black/80 z-[1] backdrop-blur-[2px]"></div> {/* High-fidelity wash */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/50 z-[2]"></div>
+            </div>
 
             <div className="relative z-10 flex flex-col h-full justify-center items-center gap-8">
                 <motion.div variants={itemVariants} className="mb-4">
@@ -16,15 +19,15 @@ export const TitleSlide: React.FC = () => {
 
                 <div className="space-y-6">
                     <motion.div variants={itemVariants}>
-                        <h1 className="font-serif text-5xl md:text-8xl text-white leading-tight tracking-tight uppercase">
-                            Sartorial Excellence,<br />
-                            <span className="text-brand-gold italic lowercase tracking-normal">Digitally Delivered.</span>
+                        <h1 className="font-serif text-[11vw] md:text-[8vw] lg:text-[7.2vw] text-white leading-none tracking-tighter uppercase px-4 whitespace-nowrap flex-nowrap">
+                            The Living Legacy<br />
+                            <span className="text-brand-gold italic lowercase tracking-normal px-4">Masterclass.</span>
                         </h1>
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
-                        <h2 className="text-xl md:text-2xl text-gray-400 font-sans font-light tracking-widest uppercase mt-4">
-                            The Strategic Legacy Asset
+                        <h2 className="text-lg md:text-2xl text-gray-400 font-sans font-light tracking-widest uppercase mt-4 px-4 pb-12">
+                            The Ghost in the Machine
                         </h2>
                     </motion.div>
                 </div>

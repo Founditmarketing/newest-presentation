@@ -9,26 +9,24 @@ export const Tactic3Slide: React.FC = () => {
             <div className="flex flex-col h-full justify-center">
                 <motion.div variants={itemVariants} className="mb-12 text-center md:text-left">
                     <div className="flex items-center gap-3 mb-3 text-brand-gold font-sans uppercase tracking-[0.2em] text-xs justify-center md:justify-start">
-                        <InfinityIcon size={14} className="text-brand-gold" />
-                        <span>Pillar 3</span>
+                        <span>V. Content</span>
                     </div>
-                    <h2 className="font-serif text-4xl md:text-5xl text-white">The Infinite Handshake (Lifecycle)</h2>
+                    <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white">The Virtual Lookbook</h2>
                 </motion.div>
 
-                <motion.p variants={itemVariants} className="text-2xl text-gray-300 font-serif italic mb-16 text-center md:text-left leading-relaxed">
-                    Automating the 12-month relationship. <strong className="text-brand-gold font-medium not-italic">Turning one-time grooms into lifetime clients.</strong>
+                <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-300 font-serif italic mb-16 text-center md:text-left leading-relaxed">
+                    You spend thousands on photography. <strong className="text-brand-gold font-medium not-italic">AI makes it work 10x harder in your 'House Voice'.</strong>
                 </motion.p>
 
                 <div className="relative mt-8">
                     {/* Timeline Line */}
                     <div className="absolute top-8 left-0 w-full h-px bg-brand-gold/20 -z-10 hidden md:block"></div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { icon: Clock, label: "The Wedding", sub: "Initial Fitting & Sale" },
-                            { icon: CalendarHeart, label: "3 Months", sub: "Honeymoon Follow-up" },
-                            { icon: CalendarHeart, label: "6 Months", sub: "Seasonal Wardrobe Update" },
-                            { icon: Heart, label: "1 Year", sub: "Anniversary & Loyalty" },
+                            { icon: Clock, label: "LinkedIn", sub: "For Professional Clients" },
+                            { icon: Heart, label: "Instagram", sub: "Visual, Luxury Caption" },
+                            { icon: CalendarHeart, label: "Private SMS", sub: "Insiders-Only for Top 10%" },
                         ].map((step, index) => (
                             <motion.div
                                 key={index}

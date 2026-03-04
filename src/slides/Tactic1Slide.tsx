@@ -8,22 +8,21 @@ export const Tactic1Slide: React.FC = () => {
         <SlideLayout>
             <div className="flex flex-col h-full justify-center">
                 <motion.div variants={itemVariants} className="mb-12">
-                    <div className="flex items-center gap-3 mb-3 text-brand-gold font-sans uppercase tracking-[0.2em] text-xs">
-                        <Crosshair size={14} className="text-brand-gold" />
-                        <span>Pillar 1</span>
+                    <div className="flex items-center gap-3 mb-3 text-brand-gold font-sans uppercase tracking-[0.2em] text-xs md:text-sm">
+                        <span>III. The Interactive Demo</span>
                     </div>
-                    <h2 className="font-serif text-4xl md:text-5xl text-white">Drive-In Wealth (Geo-Fencing)</h2>
+                    <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white">Talk to Ted</h2>
                 </motion.div>
 
-                <motion.p variants={itemVariants} className="text-2xl text-gray-300 font-serif italic mb-12 border-l-2 border-brand-gold pl-6 max-w-4xl leading-relaxed">
-                    "Capturing high-net-worth attention at Country Clubs and Alumni events <strong className="text-white font-medium not-italic">before they even search Google.</strong>"
+                <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-300 font-serif italic mb-12 border-l-2 border-brand-gold pl-6 max-w-4xl leading-relaxed">
+                    "Notice the tone. That isn't a robot. <strong className="text-white font-medium not-italic">That’s Ted.</strong> It’s gracious. It’s authoritative. It’s capturing leads while we sit in this room."
                 </motion.p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
-                        { label: "Precision Targeting", desc: "Pinpoint accuracy over affluent demographics.", icon: Crosshair },
-                        { label: "Strategic Territories", desc: "Mapping high-value micro-regions.", icon: Map },
-                        { label: "Preemptive Exposure", desc: "Owning the narrative before the client asks.", icon: User },
+                        { label: "\"Can I wear an Ironman watch with a Canali suit?\"", desc: "Try to stump him on etiquette.", icon: User },
+                        { label: "\"Why should I spend $4,000 on a Castangia shoulder?\"", desc: "Ask him to articulate value without being pushy.", icon: Crosshair },
+                        { label: "\"I have a funeral at 2:00 PM and nothing fits.\"", desc: "Test the \"Plan B\" protocol.", icon: Map },
                     ].map((item, index) => (
                         <motion.div
                             key={index}
