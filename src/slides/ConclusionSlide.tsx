@@ -39,13 +39,13 @@ export const ConclusionSlide: React.FC = () => {
                         className="group relative inline-flex items-center gap-4 px-12 py-5 bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-black hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] transition-all duration-500 rounded-none uppercase tracking-[0.2em] font-sans text-sm font-bold"
                     >
                         <Lock size={18} />
-                        <span>Request Access</span>
+                        <span>Initiate Strategy</span>
                         <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
                     </a>
 
                     <div className="flex flex-col items-center mt-12 space-y-3 opacity-80">
                         <p className="text-white font-serif text-xl tracking-wide">Trevor Ruby</p>
-                        <p className="text-brand-gold text-xs tracking-[0.3em] uppercase font-sans">Strategic Partner &mdash; Found It Marketing</p>
+                        <p className="text-brand-gold text-xs tracking-[0.3em] uppercase font-sans">Architected by Data &mdash; We Build Empires</p>
                     </div>
                 </motion.div>
             </div>

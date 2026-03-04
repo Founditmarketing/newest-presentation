@@ -36,7 +36,7 @@ export const TitleSlide: React.FC = () => {
                     <div className="inline-flex items-center gap-4 border border-brand-gold/20 bg-brand-charcoal/50 rounded-none px-8 py-4 backdrop-blur-md">
                         <div className="w-2 h-2 rounded-full bg-brand-gold shadow-[0_0_15px_#D4AF37]"></div>
                         <p className="text-brand-gold text-[11px] font-bold uppercase tracking-[0.2em] font-sans">
-                            Presented by Found It Marketing &mdash; For High-End Menswear
+                            Architected by Data &mdash; Found It Marketing
                         </p>
                     </div>
                 </motion.div>

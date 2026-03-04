@@ -18,8 +18,8 @@ export default {
                 },
             },
             fontFamily: {
-                sans: ['Montserrat', 'sans-serif'],
-                serif: ['"Cormorant Garamond"', 'serif'],
+                sans: ['Inter', 'sans-serif'],
+                serif: ['Outfit', 'sans-serif'], // We use 'serif' class for headings in this project, so we map it to Outfit
                 mono: ['JetBrains Mono', 'Menlo', 'monospace'],
             },
             animation: {
