@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://umhmrsjrhlijmfpjyreu.supabase.co';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'sb_publishable_PZ5PEXxNfUFYl8AN7aksWw_T_KJSXZg';
 
 // Warn instead of crashing if keys are missing
 if (!supabaseUrl || !supabaseAnonKey) {
