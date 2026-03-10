@@ -1,3 +1,6 @@
 {
-    "name": "foundit-deck-v2"
+    "name": "foundit-deck-v2",
+    "rewrites": [
+        { "source": "/(.*)", "destination": "/index.html" }
+    ]
 }
