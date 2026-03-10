@@ -226,8 +226,8 @@ const slides: SlideData[] = [
 const PresentationContent = () => {
     const { currentSlide, isHost, setSlide, becomeHost, isConnected } = useSync();
     const [showNotes, setShowNotes] = useState(false);
-    const [touchStart, setTouchStart] = useState<number | null>(null);
-    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
+    const [touchEnd, setTouchEnd] = useState<{ x: number; y: number } | null>(null);
 
     const nextSlide = useCallback(() => {
         if (currentSlide + 1 < slides.length) {
@@ -262,19 +262,24 @@ const PresentationContent = () => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [nextSlide, prevSlide, becomeHost]);
 
-    // Touch navigation
+    // Touch navigation — track both axes so vertical scroll isn't blocked
     const minSwipeDistance = 50;
     const onTouchStart = (e: React.TouchEvent) => {
         setTouchEnd(null);
-        setTouchStart(e.targetTouches[0].clientX);
+        setTouchStart({ x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY });
     };
-    const onTouchMove = (e: React.TouchEvent) => setTouchEnd(e.targetTouches[0].clientX);
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd({ x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY });
+    };
     const onTouchEnd = () => {
         if (!touchStart || !touchEnd) return;
         if (!isHost) return; // Only host can swipe to change slides
-        const distance = touchStart - touchEnd;
-        const isLeftSwipe = distance > minSwipeDistance;
-        const isRightSwipe = distance < -minSwipeDistance;
+        const dx = touchStart.x - touchEnd.x;
+        const dy = touchStart.y - touchEnd.y;
+        // Only treat as horizontal swipe if clearly more horizontal than vertical
+        if (Math.abs(dx) < Math.abs(dy)) return;
+        const isLeftSwipe = dx > minSwipeDistance;
+        const isRightSwipe = dx < -minSwipeDistance;
         if (isLeftSwipe) nextSlide();
         if (isRightSwipe) prevSlide();
     };
