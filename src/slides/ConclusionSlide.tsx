@@ -11,7 +11,7 @@ const downloadVCard = () => {
         'FN:Trevor Ruby',
         'ORG:Found It Marketing',
         'TITLE:Founder',
-        'TEL;TYPE=CELL:+1 (555) 000-0000',
+        'TEL;TYPE=CELL:+1 (318) 280-0115',
         'EMAIL:trevor@founditmarketing.com',
         'URL:https://founditmarketing.com',
         'END:VCARD'
