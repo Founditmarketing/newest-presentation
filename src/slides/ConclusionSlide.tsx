@@ -1,8 +1,30 @@
 import React from 'react';
 import { SlideLayout, itemVariants } from '@/components/SlideLayout';
 import { motion } from 'framer-motion';
-import { ArrowRight, Lock } from 'lucide-react';
+import { ArrowRight, Lock, Download } from 'lucide-react';
 import Logo from '@/components/Logo';
+
+const downloadVCard = () => {
+    const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:Trevor Ruby',
+        'ORG:Found It Marketing',
+        'TITLE:Founder',
+        'TEL;TYPE=CELL:+1 (555) 000-0000',
+        'EMAIL:trevor@founditmarketing.com',
+        'URL:https://founditmarketing.com',
+        'END:VCARD'
+    ].join('\n');
+
+    const blob = new Blob([vcard], { type: 'text/vcard' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Trevor-Ruby-Found-It-Marketing.vcf';
+    a.click();
+    URL.revokeObjectURL(url);
+};
 
 export const ConclusionSlide: React.FC = () => {
     return (
@@ -30,7 +52,7 @@ export const ConclusionSlide: React.FC = () => {
 
                 <motion.div
                     variants={itemVariants}
-                    className="flex flex-col items-center gap-8"
+                    className="flex flex-col items-center gap-4"
                 >
                     <a
                         href="https://api.leadconnectorhq.com/widget/form/mZfI93H8OaAh1tA6aV9P"
@@ -43,7 +65,15 @@ export const ConclusionSlide: React.FC = () => {
                         <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
                     </a>
 
-                    <div className="flex flex-col items-center mt-12 space-y-3 opacity-80">
+                    <button
+                        onClick={downloadVCard}
+                        className="group inline-flex items-center gap-3 px-10 py-3 bg-transparent border border-white/20 text-gray-400 hover:border-white/40 hover:text-white transition-all duration-300 uppercase tracking-[0.2em] font-sans text-xs"
+                    >
+                        <Download size={14} />
+                        <span>Save Contact</span>
+                    </button>
+
+                    <div className="flex flex-col items-center mt-8 space-y-3 opacity-80">
                         <p className="text-white font-serif text-xl tracking-wide">Trevor Ruby</p>
                         <p className="text-brand-gold text-xs tracking-[0.3em] uppercase font-sans">Architected by Data &mdash; We Build Empires</p>
                     </div>

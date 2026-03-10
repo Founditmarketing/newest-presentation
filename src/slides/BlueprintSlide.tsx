@@ -1,7 +1,7 @@
 import React from 'react';
 import { SlideLayout, itemVariants } from '@/components/SlideLayout';
 import { motion } from 'framer-motion';
-import { QRCodeSVG } from 'qrcode.react';
+import { ExternalLink } from 'lucide-react';
 
 const TED_URL = 'https://weiss-goldring-vercel.vercel.app/';
 
@@ -15,22 +15,28 @@ export const BlueprintSlide: React.FC = () => {
                         Talk to <span className="text-brand-gold italic">Ted.</span>
                     </h2>
                     <p className="mt-4 text-gray-400 font-sans text-base md:text-lg font-light max-w-lg mx-auto">
-                        Pull out your phone. Scan the code. Try to stump him.
+                        Pull out your phone. Open the link. Try to stump him.
                     </p>
                 </motion.div>
 
-                <motion.div
-                    variants={itemVariants}
-                    className="p-4 bg-white rounded-xl shadow-[0_0_60px_rgba(193,163,98,0.25)]"
-                >
-                    <QRCodeSVG value={TED_URL} size={220} />
+                <motion.div variants={itemVariants}>
+                    <a
+                        href={TED_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-4 px-12 py-5 bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-black hover:shadow-[0_0_40px_rgba(193,163,98,0.4)] transition-all duration-500 uppercase tracking-[0.2em] font-sans text-sm font-bold"
+                    >
+                        <ExternalLink size={18} />
+                        <span>Talk to Ted</span>
+                    </a>
+                    <p className="mt-3 text-gray-600 font-mono text-xs">weiss-goldring-vercel.vercel.app</p>
                 </motion.div>
 
-                <motion.div variants={itemVariants} className="space-y-2 text-sm text-gray-500 font-mono">
+                <motion.div variants={itemVariants} className="space-y-2">
                     <p className="text-brand-gold text-xs tracking-widest uppercase">Ask him anything:</p>
-                    <p className="text-gray-400 italic">"Can I wear brown shoes with a black suit?"</p>
-                    <p className="text-gray-400 italic">"Why spend $4,000 on a Castangia suit?"</p>
-                    <p className="text-gray-400 italic">"What is the rule of the Green Stamp?"</p>
+                    <p className="text-gray-400 font-sans italic text-sm">"Can I wear brown shoes with a black suit?"</p>
+                    <p className="text-gray-400 font-sans italic text-sm">"Why spend $4,000 on a Castangia suit?"</p>
+                    <p className="text-gray-400 font-sans italic text-sm">"What is the rule of the Green Stamp?"</p>
                 </motion.div>
             </div>
         </SlideLayout>
