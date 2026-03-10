@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Logo from './Logo';
 
 export const LobbySlide: React.FC = () => {
-    const joinUrl = 'https://foundit-deck-v2.vercel.app/presentation';
+    const joinUrl = 'https://newest-presentation.vercel.app/presentation';
 
     return (
         <SlideLayout className="text-center">
