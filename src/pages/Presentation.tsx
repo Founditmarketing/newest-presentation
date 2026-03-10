@@ -137,22 +137,25 @@ const FoundItStatsSlide: React.FC = () => (
 
 // --- MAIN DATA ---
 
+const TED_LINK = 'https://weiss-goldring-vercel.vercel.app/';
+
 const slides: SlideData[] = [
     {
         id: 'lobby',
         component: LobbySlide,
         notes: [
-            "Welcome: 'Scan the QR code to join the session. I will be controlling your screens from here.'",
-            "Setup: 'Wait for audience to join.'"
+            "SETUP: Dim the lights. Stand center stage. Silently for 10 seconds, making eye contact with the veterans in the room.",
+            "WELCOME: 'Scan the QR code to join the session. I will be controlling your screens from here. Hold tight.'"
         ]
     },
     {
         id: 'intro',
         component: FoundItStatsSlide,
         notes: [
-            "Philosophy: 'We don't view ourselves as a vendor. A vendor sells you a service. We build empires.'",
-            "Stats: 'We have generated over $500 Million in revenue for our clients. We serve businesses in 48 states.'",
-            "Retention: 'The average agency keeps a client for 8 months. Our partners stay for over 5 years. Why? Because we make them money.'"
+            "THE HOOK — I. THE GHOST IN THE MACHINE (12 Min)",
+            "'Gentlemen, look around this room. Between the 14 of you, we have over five centuries of taste, intuition, and Old World mastery. You know the exact moment a man's confidence changes when he puts on a full-canvas jacket. You can spot a machine-made buttonhole from across the street.'",
+            "'But I want to talk about a tragedy that happens every single day in your cities. At 2:00 AM tonight, a high-net-worth individual in your town—maybe a young attorney who just made partner—is staring at his phone. He has questions that only you can answer. But you are asleep. Your doors are locked.'",
+            "'Right now, your website is a digital graveyard. Your CRM is a digital Rolodex collecting dust. Today, I am going to show you how we took the soul of a 126-year-old institution—Weiss & Goldring—and gave it Digital Immortality. We aren't just building a chatbot. We are performing Neural Cloning.'"
         ]
     },
 
@@ -161,64 +164,82 @@ const slides: SlideData[] = [
         id: 'concierge-title',
         component: TitleSlide,
         notes: [
-            "Intro: 'The Digital Concierge. Scaling High-Touch Relationships in an Automating World.'",
-            "Context: 'Presented by Trevor Ruby.'"
+            "TRANSITION: 'The Digital Concierge Model. Scaling High-Touch Relationships in an Automating World.'",
+            "CONTEXT: Presented by Trevor Ruby, Found It Marketing. Venue: High-End Menswear Store Owner Retreat."
         ]
     },
     {
         id: 'concierge-problem',
         component: ProblemSlide,
         notes: [
-            "Problem: 'Most luxury businesses have vending machine websites. Cold. Transactional.'",
-            "Pain: 'We are losing the handshake the moment a client goes online.'"
+            "THE PROBLEM — The Ghost in the Machine",
+            "'Most luxury businesses have vending machine websites. Cold. Transactional. You put in a question, and a robot spits out a paragraph of cold text.'",
+            "'We are losing the handshake the moment a client goes online. Your 40 years of wisdom are effectively invisible the moment your lights go out.'"
         ]
     },
     {
         id: 'concierge-solution',
         component: SolutionSlide,
         notes: [
-            "Solution: 'We don't build websites. We build Digital Estates.'",
-            "Concept: 'Using Data and AI to mirror your white-glove service.'"
+            "II. THE PIVOT — CONCIERGE VS. BOT (8 Min)",
+            "'I know the hesitation. You've seen chatbots before. They are digital vending machines. That is not the Silver Standard.'",
+            "'We have pivoted from a chatbot to an Active Digital Concierge. A chatbot waits for you to talk. A Concierge leads.'",
+            "'It doesn't just answer a question; it visualizes the look for the customer. It speaks with the specific authority of your house voice. It doesn't wait for a lead; it identifies intent.'",
+            "'We are using the latest multimodal technology—Gemini 2.5—to ensure the digital experience is as high-touch as your showroom floor.'"
         ]
     },
     {
         id: 'concierge-blueprint',
         component: BlueprintSlide,
         notes: [
-            "Case Study: 'Andrew Davis Clothiers.'",
-            "Goal: 'Expanding from local shop to Regional Destination. Capturing Drive-In Wealth.'"
+            "III. THE REVEAL — TALK TO TED (15 Min)",
+            `ACTION: Project QR code for ${TED_LINK}`,
+            "'I want you to pull out your phones. Right now. Scan this code. You are looking at the live Weiss & Goldring Active Concierge. This isn't a slide deck. This is a working prototype of Ted Silver's Digital Twin.'",
+            "'Don't take my word for it. Try to stump him: Ask him — Ted, can I wear brown shoes with a black suit? Why should I spend $4,000 on a Castangia suit? What is the rule of the Green Stamp?'",
+            "Allow 3-5 minutes of quiet for them to play. This is your strongest moment. Watch their faces.",
+            "'Notice that he isn't just answering. He is advising. He is recommending Grey as a foundation. He is talking about the Continental Balance in a shoulder. He is inviting you to a fitting. This is capturing leads while we are sitting here in this room.'"
         ]
     },
     {
         id: 'concierge-tactic1',
         component: Tactic1Slide,
         notes: [
-            "Geo-Fencing: 'Digitally fencing high-net-worth locations like Country Clubs.'",
-            "Quote: 'We don't wait for them to search; we go where they live.'"
+            "IV. MONDAY MORNING — THE ENGINE ROOM (10 Min)",
+            "Show simulated GHL dashboard on screen.",
+            "'It's 9:00 AM Monday. Your AI agent has already scanned your database. It gives you Moments of Opportunity.'",
+            "Behavioral Re-engagement: 'Mr. Smith hasn't bought a suit in 18 months, but last night he spent 10 minutes on the site looking at Navy Blazers. Here is a drafted SMS inviting him for a private viewing.'",
+            "Lifecycle Strike: 'Graduation is 60 days away. Here are the 40 fathers in your database with sons aged 18. Here is a drafted email for each, mentioning their own style history.'",
+            "'This is Predictive Clienteling. You aren't chasing people; you are providing Neural Counsel exactly when they need it.'"
         ]
     },
     {
         id: 'concierge-tactic2',
         component: Tactic2Slide,
         notes: [
-            "AI Expert: 'Contrast Chatbot vs AI Concierge.'",
-            "Detail: 'Sartorial Advisor knowing every fabric vs generic support.'"
+            "V. THE ROI — MEASURING FITTINGS (5 Min)",
+            "'Most agencies will show you Click-Through Rates. I don't care about clicks. Clicks don't pay the light bill.'",
+            "'We measure Fittings. Because we stitch the AI Concierge directly to the CRM, we can track a guest from the second they ask a question at midnight to the moment they swipe their card at your register.'",
+            "'We measure ROAS in Dollars, not Engagement.'"
         ]
     },
     {
         id: 'concierge-tactic3',
         component: Tactic3Slide,
         notes: [
-            "Lifecycle: 'Turning a one-time transaction into a lifetime relationship.'",
-            "Method: 'Automated, personalized follow-up.'"
+            "BRIDGE: The full lifecycle from digital touchpoint to in-store conversion.",
+            "'Turning a one-time transaction into a lifetime relationship. Automated, personalized follow-up. The machine never forgets an anniversary. It never misses a birthday. It never drops a client.'"
         ]
     },
     {
         id: 'concierge-conclusion',
         component: ConclusionSlide,
         notes: [
-            "Conclusion: 'You have mastered the physical relationship.'",
-            "Ask: 'Let me build your digital one.'"
+            "VI. THE CLOSING — THE LEGACY BLUEPRINT (10 Min)",
+            "'I'm not here to sell you a software subscription. I am here to build your Digital Estate.'",
+            "Project the 14 store names: Norman Stockton, Khaki's, Malouf, Great Scott...",
+            "'I have spent the last few weeks auditing each of your stores. I see the history. I see the 110-year legacies. But I also see the gaps. I see the 25-year-old tech entrepreneur in your town who should be your best client, but he's intimidated by your expertise.'",
+            "'I'll be here through tomorrow evening. Pull me aside. Let's grab a drink and look at the audit for The Locker Room or M.S. McClellan.'",
+            "'Let's ensure that 50 years from now, your store is still the undisputed standard of excellence in your city.'"
         ]
     }
 ];
