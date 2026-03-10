@@ -271,6 +271,7 @@ const PresentationContent = () => {
     const onTouchMove = (e: React.TouchEvent) => setTouchEnd(e.targetTouches[0].clientX);
     const onTouchEnd = () => {
         if (!touchStart || !touchEnd) return;
+        if (!isHost) return; // Only host can swipe to change slides
         const distance = touchStart - touchEnd;
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
@@ -297,7 +298,7 @@ const PresentationContent = () => {
 
     return (
         <div
-            className="relative w-full h-[100dvh] bg-black overflow-hidden font-sans text-slate-200"
+            className="relative w-full min-h-[100dvh] bg-black overflow-y-auto overflow-x-hidden font-sans text-slate-200"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
