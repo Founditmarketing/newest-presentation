@@ -27,10 +27,11 @@ export const SyncProvider: React.FC<{ children: React.ReactNode }> = ({ children
     useEffect(() => {
         if (!supabase) return;
 
-        // 1. Create channel
+        // 1. Create channel with explicit ack enabled for mobile reliability
         const channel = supabase.channel('presentation-v1', {
             config: {
-                broadcast: { self: false } // Don't receive own messages
+                broadcast: { self: false, ack: true }, // Don't receive own messages, force acknowledge
+                presence: { key: isHost ? 'host' : 'client' }
             }
         });
 
@@ -42,10 +43,12 @@ export const SyncProvider: React.FC<{ children: React.ReactNode }> = ({ children
                     setCurrentSlide(payload.payload.index);
                 }
             })
-            .subscribe((status) => {
+            .subscribe(async (status) => {
                 if (status === 'SUBSCRIBED') {
                     setIsConnected(true);
                     channelRef.current = channel;
+                    // Force a presence track to keep the socket alive on mobile
+                    await channel.track({ online: true, role: isHost ? 'host' : 'client' });
                 }
             });
 
