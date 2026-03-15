@@ -137,7 +137,7 @@ const FoundItStatsSlide: React.FC = () => (
 
 // --- MAIN DATA ---
 
-const TED_LINK = 'https://weiss-goldring-vercel.vercel.app/';
+const TED_LINK = 'https://www.weissgoldring.com/';
 
 const slides: SlideData[] = [
     {

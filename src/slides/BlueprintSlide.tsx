@@ -3,7 +3,7 @@ import { SlideLayout, itemVariants } from '@/components/SlideLayout';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
-const TED_URL = 'https://weiss-goldring-vercel.vercel.app/';
+const TED_URL = 'https://www.weissgoldring.com/';
 
 export const BlueprintSlide: React.FC = () => {
     return (
@@ -29,7 +29,7 @@ export const BlueprintSlide: React.FC = () => {
                         <ExternalLink size={18} />
                         <span>Talk to Ted</span>
                     </a>
-                    <p className="mt-3 text-gray-600 font-mono text-xs">weiss-goldring-vercel.vercel.app</p>
+                    <p className="mt-3 text-gray-600 font-mono text-xs">weissgoldring.com</p>
                 </motion.div>
 
                 <motion.div variants={itemVariants} className="space-y-2">
