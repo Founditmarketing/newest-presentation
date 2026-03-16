@@ -64,7 +64,7 @@ export const SlideLayout: React.FC<SlideLayoutProps> = ({ children, className = 
         initial="hidden"
         animate="visible"
         exit="exit"
-        className={`w-full max-w-5xl mx-auto px-6 min-h-screen py-24 flex flex-col justify-center relative z-10 ${className}`}
+        className={`w-full max-w-5xl mx-auto px-6 min-h-full flex flex-col justify-center relative z-10 ${className}`}
       >
         {children}
       </motion.div>

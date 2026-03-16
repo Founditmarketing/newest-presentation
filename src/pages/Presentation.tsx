@@ -324,7 +324,7 @@ const PresentationContent = () => {
 
     return (
         <div
-            className="relative w-full min-h-[100dvh] bg-black overflow-y-auto overflow-x-hidden font-sans text-slate-200"
+            className="fixed inset-0 w-full h-[100dvh] bg-black overflow-hidden font-sans text-slate-200"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
@@ -363,11 +363,11 @@ const PresentationContent = () => {
             </header>
 
             {/* Main Content Area */}
-            <main className="relative w-full h-full flex items-center justify-center z-10">
+            <main className="relative w-full h-[100dvh] overflow-y-auto overflow-x-hidden z-10 pt-16 pb-24 touch-pan-y">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentSlide}
-                        className="w-full h-full"
+                        className="w-full min-h-full flex flex-col justify-center"
                         initial={{ opacity: 0, filter: "blur(8px)" }}
                         animate={{ opacity: 1, filter: "blur(0px)" }}
                         exit={{ opacity: 0, filter: "blur(8px)" }}
