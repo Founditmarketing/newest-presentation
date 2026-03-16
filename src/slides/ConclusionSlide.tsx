@@ -1,7 +1,7 @@
 import React from 'react';
 import { SlideLayout, itemVariants } from '@/components/SlideLayout';
 import { motion } from 'framer-motion';
-import { ArrowRight, Lock, Download } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import Logo from '@/components/Logo';
 
 const downloadVCard = () => {
@@ -54,26 +54,30 @@ export const ConclusionSlide: React.FC = () => {
                     variants={itemVariants}
                     className="flex flex-col items-center gap-4"
                 >
-                    <a
-                        href="https://api.leadconnectorhq.com/widget/form/mZfI93H8OaAh1tA6aV9P"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative inline-flex items-center gap-4 px-12 py-5 bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-black hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] transition-all duration-500 rounded-none uppercase tracking-[0.2em] font-sans text-sm font-bold"
-                    >
-                        <Lock size={18} />
-                        <span>Initiate Strategy</span>
-                        <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
-                    </a>
-
                     <button
                         onClick={downloadVCard}
-                        className="group inline-flex items-center gap-3 px-10 py-3 bg-transparent border border-white/20 text-gray-400 hover:border-white/40 hover:text-white transition-all duration-300 uppercase tracking-[0.2em] font-sans text-xs"
+                        className="group relative inline-flex items-center gap-4 px-12 py-5 bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-black hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] transition-all duration-500 rounded-none uppercase tracking-[0.2em] font-sans text-sm font-bold"
                     >
-                        <Download size={14} />
-                        <span>Save Contact</span>
+                        <Download size={18} />
+                        <span>Download Contact</span>
+                        <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
                     </button>
 
-                    <div className="flex flex-col items-center mt-8 space-y-3 opacity-80">
+                    <a
+                        href="https://founditmarketing.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative inline-flex flex-col items-center mt-8 transition-all duration-500"
+                    >
+                        <span className="text-brand-gold text-xs tracking-[0.3em] uppercase font-sans mb-3 opacity-80 group-hover:opacity-100 transition-opacity">
+                            Visit Our Website
+                        </span>
+                        <span className="font-serif text-3xl md:text-5xl text-white group-hover:text-brand-gold transition-colors duration-500 relative pb-2 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-brand-gold after:origin-bottom-right group-hover:after:scale-x-100 group-hover:after:origin-bottom-left after:transition-transform after:duration-500">
+                            founditmarketing.com
+                        </span>
+                    </a>
+
+                    <div className="flex flex-col items-center mt-12 space-y-3 opacity-80">
                         <p className="text-white font-serif text-xl tracking-wide">Trevor Ruby</p>
                         <p className="text-brand-gold text-xs tracking-[0.3em] uppercase font-sans">Architected by Data &mdash; We Build Empires</p>
                     </div>
